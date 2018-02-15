@@ -1,71 +1,59 @@
 /* RESET LAYOUT AND ADD COLORS */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  max-width: inherit;
-  background: #888;
-  color: #444;
+    margin: 0;
+    padding: 0;
+    background: #888;
+    color: #444;
 }
 
 header, footer {
-  font-size: large;
-  text-align: center;
-  padding: 0.5rem 0;
-  background-color: #444;
-  color: #eee;
+    font-size: large;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #444;
+    color: #eee;
 }
 
 nav {
-  background: #eee;
+    background: #eee;
 }
 
 main {
-  background: #eee;
+    background: #eee;
 }
 
 aside {
-  background: #eee;
+    background: #eee;
 }
 
 
-/* GRID-BASED LAYOUT */
+/* Layout */
 
 body {
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: 200px 1fr 150px;
-  grid-template-rows: min-content 1fr min-content;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-  grid-row: 1;
-  grid-column: 1 / 4;
-}
-
-nav {
-  grid-row: 2;
-  grid-column: 1 / 2;
-  padding: 0 10px;
+    background-color: rgb(98, 0, 238);
 }
 
 main {
-  grid-row: 2;
-  grid-column: 2 / 3;
-  padding: 4em 4em;
-  width: 30em;
-  margin: 0 auto;
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 5em 4em;
+    width: 35em;
 }
 
-aside {
-  grid-row: 2;
-  grid-column: 3 / 4;
-  padding: 0 10px;
-}
 
 footer {
-  grid-row: 3;
-  grid-column: 1 / 4;
+
 }
 
 
@@ -74,11 +62,8 @@ footer {
 footer span {
     opacity: .5;
 }
-main {
-    margin-top: 2em;
-}
 form {
-    margin-bottom: 2em;
+    margin: 1em 0 2em;
 }
 
 dl {
@@ -94,10 +79,22 @@ div.outline {
     border: 1px solid #bbb;
     padding: 1em;
     margin-bottom: 2em;
+    border-radius: .3em;
 }
 
-#scrollex, .sechild {
+#scrollex {
     display: flex;
-    flex-basis: 35%;
     justify-content: space-between;
+}
+.sechild {
+    flex-basis: 45%;
+}
+
+
+/*  Go full width */
+@media only screen and (max-width: 35em) {
+    main {
+        margin: 0;
+        width: 100%;
+    }
 }
