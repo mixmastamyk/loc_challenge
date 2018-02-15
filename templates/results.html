@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <main>
+        <h1 class="mdc-heading">Results</h1>
+
+        <div class="outline">
+            <dl>
+                {% for result in results %}
+                <dt>{{ result[1] }}</dt>
+                <dd>{{ result[0] }}</dd>
+                {% endfor %}
+            </dl>
+        </div>
+
+            <button
+                    data-mdc-auto-init="MDCRipple"
+                    onclick="location.href='/'"
+                    type="button"
+                    class="mdc-button
+                           mdc-button--raised
+                           mdc-ripple-surface"
+            >
+                        ⏴ Back to Start Page
+            </button>
+    </main>
+{% endblock %}

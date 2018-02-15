@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LOC Challenge</title>
+
+    <link rel="stylesheet"
+        href="/static/node_modules/material-components-web/dist/material-components-web.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="/static/main.css">
+
+</head>
+
+<body class="mdc-typography">
+<!--
+    <header>
+        {% if name %}
+            <span class="mdc-toolbar__title">Hello {{ name }}!</span>
+        {% else %}
+            <span class="mdc-toolbar__title">Hello, World!</span>
+        {% endif %}
+    </header>
+-->
+
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall demo-toolbar">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+          <span class="mdc-toolbar__title">
+            LOC Challenge
+          </span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end"
+            role="toolbar">
+          <a href="#" class="material-icons mdc-toolbar__icon"
+            aria-label="Download" alt="Download">file_download</a>
+          <a href="#" class="material-icons mdc-toolbar__icon"
+            aria-label="Print this page" alt="Print this page">print</a>
+          <a href="#" class="material-icons mdc-toolbar__icon"
+            aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+        </section>
+      </div>
+    </header>
+
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <span>&lt;!--&nbsp; <i>footerage</i> &nbsp;--&gt;</span>
+    </footer>
+
+    <script src="/static/node_modules/material-components-web/dist/material-components-web.js">
+    </script>
+    <script>mdc.autoInit()</script>
+
+</body>
+</html>

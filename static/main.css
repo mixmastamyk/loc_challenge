@@ -1,0 +1,103 @@
+/* RESET LAYOUT AND ADD COLORS */
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+  background: #888;
+  color: #444;
+}
+
+header, footer {
+  font-size: large;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #444;
+  color: #eee;
+}
+
+nav {
+  background: #eee;
+}
+
+main {
+  background: #eee;
+}
+
+aside {
+  background: #eee;
+}
+
+
+/* GRID-BASED LAYOUT */
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 200px 1fr 150px;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / 4;
+}
+
+nav {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  padding: 0 10px;
+}
+
+main {
+  grid-row: 2;
+  grid-column: 2 / 3;
+  padding: 4em 4em;
+  width: 30em;
+  margin: 0 auto;
+}
+
+aside {
+  grid-row: 2;
+  grid-column: 3 / 4;
+  padding: 0 10px;
+}
+
+footer {
+  grid-row: 3;
+  grid-column: 1 / 4;
+}
+
+
+
+/* more */
+footer span {
+    opacity: .5;
+}
+main {
+    margin-top: 2em;
+}
+form {
+    margin-bottom: 2em;
+}
+
+dl {
+    display: block;
+}
+dt {
+    font-weight: bold; }
+dd {
+    margin-bottom: 1em;
+}
+
+div.outline {
+    border: 1px solid #bbb;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#scrollex, .sechild {
+    display: flex;
+    flex-basis: 35%;
+    justify-content: space-between;
+}

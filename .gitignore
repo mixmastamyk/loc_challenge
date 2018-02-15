@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# project
+static/node_modules/
+patentSimilarityApp.py
