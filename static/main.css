@@ -107,3 +107,7 @@ match background
 .mdc-text-field--textarea .mdc-text-field__label {
     background-color: inherit;
 }
+
+.material-icons {
+    line-height: inherit;
+}
