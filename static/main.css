@@ -48,6 +48,7 @@ main {
     flex-grow: 1;
     margin: 0 auto;
     padding: 5em 4em;
+    padding-bottom: 2em;
     width: 35em;
 }
 
@@ -86,8 +87,11 @@ div.outline {
     display: flex;
     justify-content: space-between;
 }
-.sechild {
+div.sechild {
     flex-basis: 45%;
+    padding: .5em;
+    height: 10em;
+    overflow-y: auto;
 }
 
 
@@ -107,7 +111,16 @@ match background
 .mdc-text-field--textarea .mdc-text-field__label {
     background-color: inherit;
 }
+.mdc-list-item {
+    height: auto;
+    font-size: .6em;
+}
+
 
 .material-icons {
     line-height: inherit;
 }
+
+
+
+
