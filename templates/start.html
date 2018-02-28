@@ -4,21 +4,20 @@
 {% block body %}
     <main>
         <form id="greeting-form" action="" method="post">
-            <div class="
+            <div data-mdc-auto-init="MDCTextField" class="
                     mdc-text-field
-                    mdc-text-field--fullwidth
                     mdc-text-field--textarea
+                    mdc-text-field--fullwidth
                     mdc-text-field--upgraded
                 ">
-                <label for="input_text" class="
-                    mdc-text-field__label
-                    mdc-text-field__label--float-above
-                ">
-                    What interests you?
-                </label>
                 <textarea id="input_text" name="input_text"
                           class="mdc-text-field__input"
                           rows="8" required></textarea>
+                <label for="input_text" class="
+                    mdc-text-field__label
+                ">
+                    What interests you?
+                </label>
             </div>
 
             <button type="submit"
@@ -34,6 +33,7 @@
                 Submit
                 <i class="material-icons">keyboard_arrow_right</i>
             </button>
+
         </form>
 
         <h3>Scrolling Examples</h3>
@@ -55,6 +55,5 @@
 
             </div>
         </div>
-
     </main>
 {% endblock %}

@@ -1,13 +1,15 @@
+from __future__ import print_function
 from flask import Flask
 from flask import redirect, request, url_for
 from flask import render_template as render
 
 
-#~ from .patentSimilarityApp import get_input, full_pipeline
-from .patentSimilarityApp_sim import get_input, full_pipeline
+#~ import patentSimilarityApp
+import patentSimilarityApp_sim as patentSimilarityApp
 
 
 app = Flask(__name__)
+patentSimilarityApp.init()
 
 
 @app.route('/', methods=('GET', 'POST'))
@@ -29,6 +31,7 @@ def results_page():
 
     if request.method == 'POST':
         input_text = request.form.get('input_text')
-        results = full_pipeline(input_text, title=input_text)
+        results = patentSimilarityApp.get_similar_patents(input_text,
+                                                          title=input_text)
 
     return render('results.html', results=results)

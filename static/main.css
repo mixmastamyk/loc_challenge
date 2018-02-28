@@ -98,3 +98,12 @@ div.outline {
         width: 100%;
     }
 }
+
+
+
+/*
+match background
+*/
+.mdc-text-field--textarea .mdc-text-field__label {
+    background-color: inherit;
+}

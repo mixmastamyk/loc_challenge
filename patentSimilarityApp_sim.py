@@ -5,12 +5,11 @@
 '''
 
 
-def get_input(input_text):
+def init():
+    pass
 
-    return input_text
 
-
-def full_pipeline(df, title='Document Title 1'):
+def get_similar_patents(input_text, title='Document Title 1'):
 
     results = [
         ('Document Number 1', title),
@@ -21,3 +20,12 @@ def full_pipeline(df, title='Document Title 1'):
     ]
 
     return results
+
+
+if __name__ == '__main__':
+    import sys
+    from pprint import pprint
+
+    print('results:\n')
+    pprint(get_similar_patents(sys.argv[1], title=sys.argv[2]))
+
