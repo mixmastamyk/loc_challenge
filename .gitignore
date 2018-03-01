@@ -102,4 +102,4 @@ ENV/
 
 # project
 static/node_modules/
-patentSimilarityApp.py
+# patentSimilarityApp.py
