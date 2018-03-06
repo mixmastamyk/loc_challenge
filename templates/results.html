@@ -7,8 +7,12 @@
 
         <div class="outline">
             <dl>
+<!--
+                    ‣
+-->
                 {% for result in results %}
-                <dt>‣ {{ result[1] }}</dt>
+                <dt>
+                    <div class="loader"></div> {{ result[1] }}</dt>
                 <dd>{{ result[0] }}</dd>
                 {% endfor %}
             </dl>
