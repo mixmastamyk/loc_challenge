@@ -16,3 +16,8 @@ or other digital creation that helps analyze Congressional data.
     ⏵ cd loc_challenge
     ⏵ env FLASK_APP=challenge.py flask run
 
+
+.. note::
+
+    The latest version of this repo can be found at: https://github.com/whs2k/GPO-AI
+
